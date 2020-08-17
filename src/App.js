@@ -1,25 +1,38 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Provider} from 'react-redux'
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import store from './reduxweb/store'
+import Home from './components/Home';
+import Room from './components/Room';
+import OptionPage from './components/OptionPage';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Provider store={store}>
+       <Router>
+         <Switch>
+           <Route path='/' exact>
+             <Home />
+
+             </Route>
+
+           <Route path='/option' exact>
+             <OptionPage/>
+
+             </Route>
+
+           <Route path='/room' exact>
+             <Room />
+
+             </Route>
+           </Switch>
+         </Router>
+      </Provider>
+    
   );
 }
 

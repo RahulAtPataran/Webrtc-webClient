@@ -1,0 +1,76 @@
+#root {
+    height: 100vh;
+  }
+  
+.outerContainer
+{
+display: flex;
+flex: 1;
+height: 100vh;
+height: 100%;
+justify-content: center;
+align-items: center;
+background-color: black;
+align-self: center;
+}
+.Form_Container{
+
+    width: 60%;
+    padding: 2%;
+    background-color:white;
+    height: 80vh;
+    display:flex;
+    flex-direction: column;
+
+}
+
+.createRoom{
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+    border-radius: 40;
+    border:2px solid black
+ 
+}
+.createRoomTitle{
+    display: flexbox;
+     flex: 3;
+     
+     
+}
+
+.createRoomButton{
+    flex: 7;
+   
+}
+
+.Join{
+flex: 8;
+border: 1px solid black;
+display: flex;
+flex-direction:column ;
+
+}
+.joinContainers
+{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 20px;
+}
+.connectUser{
+
+    flex: 1;
+    border-right: 2px solid black;
+    display: flex;
+    flex-direction: column;
+   
+
+
+}
+.joinRoom{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+}
